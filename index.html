@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       Sibulele Mjavu – Personal Portfolio
+       Author: Sibulele Mjavu
+       Description: IT Graduate & Full-Stack Developer Portfolio
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sibulele Mjavu – Information Technology Graduate & Full-Stack Developer. Portfolio showcasing projects, skills, and certifications." />
+  <title>Sibulele Mjavu | IT Graduate & Full-Stack Developer</title>
+
+  <!-- Google Fonts: Inter + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav-header" id="navbar">
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <!-- Logo / Brand -->
+      <a href="#hero" class="nav-logo" aria-label="Sibulele Mjavu – Home">
+        <span class="logo-initials">SM</span>
+        <span class="logo-name">Sibulele Mjavu</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Button (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         1. HERO SECTION
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Hero introduction">
+      <!-- Decorative background elements -->
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
+      <div class="hero-content reveal">
+        <!-- Availability badge -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for Opportunities
+        </div>
+
+        <!-- Name & Title -->
+        <h1 class="hero-name">Sibulele <span class="accent">Mjavu</span></h1>
+        <p class="hero-title">Information Technology Graduate &amp; Full-Stack Developer</p>
+
+        <!-- Professional Summary -->
+        <p class="hero-summary">
+          Information Technology graduate with a strong foundation in Full-Stack Development, team collaboration and
+          hands-on experience building enterprise-grade applications. Passionate about IT service environments and
+          gaining practical work experience and specialised training to contribute to impacful development projects.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="assets/Sibulele_Mjavu_CV.pdf" download class="btn btn--outline">Download CV</a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">3+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-value">80%+</span>
+            <span class="stat-label">Final-Year Avg</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-value">6</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. ABOUT ME SECTION
+    ============================================================ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Avatar / Visual -->
+          <div class="about-visual reveal">
+            <div class="avatar-card">
+              <img src="assets/profile.jpg" alt="Sibulele Mjavu" class="avatar-image" />
+              <div class="avatar-ring" aria-hidden="true"></div>
+              <div class="avatar-ring avatar-ring--2" aria-hidden="true"></div>
+            </div>
+            <!-- Floating tech tags -->
+            <div class="float-tag float-tag--1">Flutter</div>
+            <div class="float-tag float-tag--2">ASP.NET</div>
+            <div class="float-tag float-tag--3">Python</div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="about-text reveal">
+            <p class="about-para">
+              I am a <strong>Information Technology graduate</strong> with a specialisation in Full-Stack Development.
+              My academic
+              journey has equipped me with a solid foundation of both front-end and back-end
+              technologies, enabling me to architect and deliver complete, production-ready solutions.
+            </p>
+            <p class="about-para">
+              I work well in <strong>IT service environments</strong> where clear thinking and fast problem-solving matter. 
+              I’ve built enterprise mobile apps, AI chatbots, and campus utility tools, and each project has strengthened my ability to turn complex technical requirements into practical, user-friendly solutions.
+            </p>
+            <p class="about-para">
+              Academically, I achieved an <strong>80%+ average in my final-year modules</strong>,
+              reflecting both my dedication to the craft and my capacity for rigorous technical
+              thinking. I am eager to bring this energy into a graduate programme, internship, or
+              junior developer role where I can contribute meaningfully from day one.
+            </p>
+
+            <!-- Key attributes -->
+            <ul class="about-attributes" role="list">
+              <li class="attribute-item">
+                <span class="attribute-icon" aria-hidden="true">&#10003;</span>
+                Full-Stack Development (Web &amp; Mobile)
+              </li>
+              <li class="attribute-item">
+                <span class="attribute-icon" aria-hidden="true">&#10003;</span>
+                Incident Management &amp; Technical Support
+              </li>
+              <li class="attribute-item">
+                <span class="attribute-icon" aria-hidden="true">&#10003;</span>
+                Problem-Solving &amp; Analytical Thinking
+              </li>
+              <li class="attribute-item">
+                <span class="attribute-icon" aria-hidden="true">&#10003;</span>
+                Strong Academic Performance (80%+ Average)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. EDUCATION SECTION
+    ============================================================ -->
+    <section class="section education" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title" id="education-heading">Education</h2>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-degree">Diploma in Information Technology</h3>
+                  <p class="timeline-institution">Central University of Technology</p>
+                </div>
+                <span class="timeline-period">2022 – 2025</span>
+              </div>
+              <div class="timeline-body">
+                <div class="achievement-badge">
+                  <span class="achievement-icon" aria-hidden="true">&#9733;</span>
+                  Achieved 80%+ average in final-year modules
+                </div>
+                <div class="coursework">
+                  <p class="coursework-label">Key Coursework</p>
+                  <div class="coursework-tags">
+                    <span class="tag">Software Development</span>
+                    <span class="tag">Technical Programming</span>
+                    <span class="tag">Software Engineering</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Samsung Innovation Campus -->
+                  <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                      <div class="timeline-card-header">
+                        <div>
+                          <h3 class="timeline-degree">AI & Python Programming</h3>
+                          <p class="timeline-institution">Samsung Innovation Campus</p>
+                        </div>
+                        <span class="timeline-period">Mar 2025 – Dec 2025</span>
+                      </div>
+
+                      <div class="achievement-badge">
+                        <span class="achievement-icon" aria-hidden="true">&#9733;</span>
+                        Graduated Feb 2026
+                      </div>
+
+                      <p class="coursework-label">Specialised Coursework</p>
+                      <div class="coursework-tags">
+                        <span class="tag">Artificial Intelligence</span>
+                        <span class="tag">Python Coding</span>
+                        <span class="tag">Programming</span>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. TECHNICAL SKILLS SECTION
+    ============================================================ -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Work With</span>
+          <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon" aria-hidden="true">
+                <!-- Code icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </span>
+              <h3 class="skill-category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill skill-pill--primary">C#</span>
+              <span class="skill-pill skill-pill--primary">Python</span>
+              <span class="skill-pill skill-pill--primary">Dart</span>
+            </div>
+          </div>
+
+          <!-- Frameworks & Libraries -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </span>
+              <h3 class="skill-category-title">Frameworks &amp; Libraries</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill skill-pill--secondary">ASP.NET Core</span>
+              <span class="skill-pill skill-pill--secondary">ASP.NET MVC</span>
+              <span class="skill-pill skill-pill--secondary">Flutter</span>
+              <span class="skill-pill skill-pill--secondary">HTML</span>
+              <span class="skill-pill skill-pill--secondary">CSS</span>
+              <span class="skill-pill skill-pill--secondary">Pandas</span>
+              <span class="skill-pill skill-pill--secondary">NumPy</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </span>
+              <h3 class="skill-category-title">Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill skill-pill--accent">VS Code</span>
+              <span class="skill-pill skill-pill--accent">PyCharm</span>
+              <span class="skill-pill skill-pill--accent">GitHub</span>
+              <span class="skill-pill skill-pill--accent">Android Studio</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </span>
+              <h3 class="skill-category-title">Soft Skills</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill skill-pill--soft">Team Collaboration</span>
+              <span class="skill-pill skill-pill--soft">Strong written & verbal communication</span>
+              <span class="skill-pill skill-pill--soft">Time Management</span>
+              <span class="skill-pill skill-pill--soft">Strong research capabilities</span>
+              <span class="skill-pill skill-pill--soft">Resilience</span>
+            </div>
+          </div>
+
+          <!-- Other -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              </span>
+              <h3 class="skill-category-title">Other</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill skill-pill--neutral">MS Office Suite</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. PROJECTS SECTION
+    ============================================================ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title" id="projects-heading">Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal" aria-labelledby="proj1-title">
+            <div class="project-card-inner">
+              <div class="project-number" aria-hidden="true">01</div>
+              <div class="project-icon-wrap" aria-hidden="true">
+                <!-- Mobile / Shield icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 class="project-title" id="proj1-title">Employee Verification System</h3>
+              <p class="project-description">
+                Developed a secure mobile application enabling real-time employee identity
+                verification to eliminate ghost workers, integrated with a Firebase backend
+                for live data synchronisation and authentication.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Flutter</span>
+                <span class="stack-tag">Firebase</span>
+                <span class="stack-tag">Dart</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="View Employee Verification System on GitHub">
+                  View on GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" aria-labelledby="proj2-title">
+            <div class="project-card-inner">
+              <div class="project-number" aria-hidden="true">02</div>
+              <div class="project-icon-wrap" aria-hidden="true">
+                <!-- Brain / AI icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
+                  <path
+                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
+                </svg>
+              </div>
+              <h3 class="project-title" id="proj2-title">AI-Powered Mental Health Chatbot</h3>
+              <p class="project-description">
+                Built an AI chatbot using Natural Language Processing to interpret user intent
+                and deliver accurate, empathetic, context-aware responses — supporting mental
+                wellness through intelligent conversation.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">NLP</span>
+                <span class="stack-tag">AI/ML</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="View AI Chatbot on GitHub">
+                  View on GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" aria-labelledby="proj3-title">
+            <div class="project-card-inner">
+              <div class="project-number" aria-hidden="true">03</div>
+              <div class="project-icon-wrap" aria-hidden="true">
+                <!-- Search / Map icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </div>
+              <h3 class="project-title" id="proj3-title">Campus Lost &amp; Found App</h3>
+              <p class="project-description">
+                Designed and developed a mobile application helping students report, search,
+                and recover lost personal items efficiently — streamlining campus property
+                management through an intuitive mobile interface.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Flutter</span>
+                <span class="stack-tag">Dart</span>
+                <span class="stack-tag">Mobile</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="View Campus Lost and Found App on GitHub">
+                  View on GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. CERTIFICATIONS SECTION
+    ============================================================ -->
+    <section class="section certifications" id="certifications" aria-labelledby="certs-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title" id="certs-heading">Certifications</h2>
+        </div>
+
+        <div class="certs-grid">
+
+          <a href="assets/ITEssentials.pdf" target="_blank" rel="noopener noreferrer"
+            class="cert-card reveal cert-card-link">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Cisco IT Essentials</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+            <span class="cert-view-badge">View PDF</span>
+          </a>
+
+          <a href="assets/Cybersecurity.pdf" target="_blank" rel="noopener noreferrer"
+            class="cert-card reveal cert-card-link">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Introduction to Cybersecurity</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+            <span class="cert-view-badge">View PDF</span>
+          </a>
+
+          <a href="assets/PythonEssentials.pdf" target="_blank" rel="noopener noreferrer"
+            class="cert-card reveal cert-card-link">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Python Essentials 1</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+            <span class="cert-view-badge">View PDF</span>
+          </a>
+
+          <a href="assets/ModernAI.pdf" target="_blank" rel="noopener noreferrer"
+            class="cert-card reveal cert-card-link">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
+                <path
+                  d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
+              </svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Introduction to Modern AI</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+            <span class="cert-view-badge">View PDF</span>
+          </a>
+
+          <a href="assets/DataScience.pdf" target="_blank" rel="noopener noreferrer"
+            class="cert-card reveal cert-card-link">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Introduction to Data Science</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+            <span class="cert-view-badge">View PDF</span>
+          </a>
+
+          <a href="assets/AI_Samsung.pdf" target="_blank" rel="noopener noreferrer"
+            class="cert-card reveal cert-card--featured cert-card-link">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">AI &amp; Python Programming</h3>
+              <p class="cert-issuer">Samsung Innovation Campus · 2025</p>
+            </div>
+            <span class="cert-badge">2025</span>
+            <span class="cert-view-badge">View PDF</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. CONTACT SECTION
+    ============================================================ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title" id="contact-heading">Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info reveal">
+            <p class="contact-intro">
+              I am actively seeking graduate programmes, internships, and junior developer roles.
+              Whether you have an opportunity to discuss or simply want to connect — my inbox is
+              always open.
+            </p>
+
+            <ul class="contact-list" role="list">
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <span>Fourways Blvd, Sandton</span>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <a href="tel:+27699947924" class="contact-link">+27 69 994 7924</a>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <a href="mailto:mjavusibulele@gmail.com" class="contact-link">mjavusibulele@gmail.com</a>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                </span>
+                <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">github.com/MjavuSibu</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact CTA Card -->
+          <div class="contact-cta-card reveal">
+            <div class="cta-card-content">
+              <h3 class="cta-card-title">Ready to Collaborate?</h3>
+              <p class="cta-card-text">
+                Let's build something great together. Reach out via email or connect on GitHub.
+              </p>
+              <a href="mailto:mjavusibulele@gmail.com" class="btn btn--primary btn--full">
+                Send an Email
+              </a>
+              <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer"
+                class="btn btn--outline btn--full">
+                View GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       8. FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-initials logo-initials--sm">SM</span>
+        <span class="footer-name">Sibulele Mjavu</span>
+      </div>
+
+      <!-- Social Links -->
+      <nav class="footer-social" aria-label="Social media links">
+        <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </a>
+        <a href="mailto:mjavusibulele@gmail.com" class="social-link" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+        <a href="tel:+27699947924" class="social-link" aria-label="Phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+        </a>
+      </nav>
+
+      <p class="footer-copy">
+        &copy; <span id="year"></span> Sibulele Mjavu. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
