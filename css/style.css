@@ -552,7 +552,7 @@ strong {
 
   .nav-links,
   .nav-cv {
-    display: none;
+    display: flex;
   }
 
   .hbg {
