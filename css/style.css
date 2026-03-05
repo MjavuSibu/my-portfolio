@@ -552,7 +552,7 @@ strong {
 
   .nav-links,
   .nav-cv {
-    display: flex;
+    display: none;
   }
 
   .hbg {
@@ -986,7 +986,7 @@ strong {
   }
 
   .hero-right {
-    display: none;
+    display: flex;
   }
 
   .hero-left {
