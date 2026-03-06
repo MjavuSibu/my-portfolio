@@ -48,6 +48,8 @@
 (function () {
   var hbg = document.getElementById('hbg');
   var mob = document.getElementById('mob');
+  var mobClose = document.getElementById('mobClose');
+  if (mobClose) mobClose.addEventListener('click', toggle);
   if (!hbg || !mob) return;
   var open = false;
   function toggle() {
