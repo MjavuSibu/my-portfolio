@@ -1,636 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Sibulele Mjavu — Full-Stack Developer & IT Graduate. Sandton, South Africa."/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sibulele Mjavu — Full-Stack Developer & IT Graduate. Sandton, South Africa." />
   <title>Sibulele Mjavu — Full-Stack Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Barlow+Condensed:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Barlow+Condensed:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<div id="progress"></div>
-<div id="cdot"></div>
-<div id="cring"></div>
+  <div id="progress"></div>
+  <div id="cdot"></div>
+  <div id="cring"></div>
 
-<!-- ══════════════════════ NAV ══════════════════════ -->
-<nav class="nav" id="nav" role="navigation">
-  <div class="nav-in">
-    <a href="#home" class="nav-logo">Sibulele <span>Mjavu</span></a>
-    <ul class="nav-links" role="list">
-      <li><a href="#about"     class="nav-a">About</a></li>
-      <li><a href="#skills"    class="nav-a">Skills</a></li>
-      <li><a href="#projects"  class="nav-a">Projects</a></li>
-      <li><a href="#education" class="nav-a">Education</a></li>
-      <li><a href="#certs"     class="nav-a">Credentials</a></li>
-      <li><a href="#contact"   class="nav-a">Contact</a></li>
-    </ul>
-    <a href="assets/Sibulele_Mjavu_CV.pdf" download class="nav-cv">Download CV</a>
-    <button class="hbg" id="hbg" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <!-- ══════════════════════ NAV ══════════════════════ -->
+  <nav class="nav" id="nav" role="navigation">
+    <div class="nav-in">
+      <a href="#home" class="nav-logo">Sibulele <span>Mjavu</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-a">About</a></li>
+        <li><a href="#skills" class="nav-a">Skills</a></li>
+        <li><a href="#projects" class="nav-a">Projects</a></li>
+        <li><a href="#education" class="nav-a">Education</a></li>
+        <li><a href="#certs" class="nav-a">Credentials</a></li>
+        <li><a href="#contact" class="nav-a">Contact</a></li>
+      </ul>
+      <a href="assets/Sibulele_Mjavu_CV.pdf" download class="nav-cv">Download CV</a>
+      <button class="hbg" id="hbg" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
   <div class="mob" id="mob" aria-hidden="true">
     <ul class="mob-links" role="list">
-      <li><a href="#about"       class="mob-a">About</a></li>
-      <li><a href="#skills"      class="mob-a">Skills</a></li>
-      <li><a href="#projects"    class="mob-a">Projects</a></li>
-      <li><a href="#education"   class="mob-a">Education</a></li>
-      <li><a href="#certs"       class="mob-a">Certifications</a></li>
-      <li><a href="#contact"     class="mob-a">Contact</a></li>
+      <li><a href="#about" class="mob-a">About</a></li>
+      <li><a href="#skills" class="mob-a">Skills</a></li>
+      <li><a href="#projects" class="mob-a">Projects</a></li>
+      <li><a href="#education" class="mob-a">Education</a></li>
+      <li><a href="#certs" class="mob-a">Certifications</a></li>
+      <li><a href="#contact" class="mob-a">Contact</a></li>
       <li><a href="#cv-download" class="mob-a">CV</a></li>
     </ul>
   </div>
-</nav>
 
-<!-- ══════════════════════ HERO ══════════════════════ -->
-<section class="hero" id="home" aria-label="Introduction">
-  <div class="hero-orb"  aria-hidden="true"></div>
-  <div class="hero-orb2" aria-hidden="true"></div>
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="hero-orb2" aria-hidden="true"></div>
 
-  <div class="hero-left">
-    <div class="hero-eyebrow">
-      Full-Stack Developer · Johannesburg, ZA
-      <span class="status-pip" aria-label="Available for work"></span>
-    </div>
-    <h1 class="hero-name">
-      <span class="first">Sibulele</span>
-      <span class="last">Mjavu</span>
-    </h1>
-    <p class="hero-role" aria-live="polite">
-      <span id="roleDisplay"></span><span class="role-cursor" aria-hidden="true"></span>
-    </p>
-    <p class="hero-summary">
-      Information Technology graduate with a specialisation in Full-Stack Development.
-      My academic journey has equipped me with a solid foundation of both front-end and back-end
-      technologies, enabling me to architect and deliver complete, production-ready solutions.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-plum">
-        Explore Work
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="assets/Sibulele_Mjavu_CV.pdf" download class="btn btn-outline">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download CV
-      </a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <span class="hstat-n" data-count="80" data-suffix="%+">0</span>
-        <span class="hstat-l">Final-Year Avg.</span>
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        Full-Stack Developer · Johannesburg, ZA
+        <span class="status-pip" aria-label="Available for work"></span>
       </div>
-      <div>
-        <span class="hstat-n" data-count="4" data-suffix="+">0</span>
-        <span class="hstat-l">Projects Built</span>
+      <h1 class="hero-name">
+        <span class="first">Sibulele</span>
+        <span class="last">Mjavu</span>
+      </h1>
+      <p class="hero-role" aria-live="polite">
+        <span id="roleDisplay"></span><span class="role-cursor" aria-hidden="true"></span>
+      </p>
+      <p class="hero-summary">
+        Information Technology graduate with a specialisation in Full-Stack Development.
+        My academic journey has equipped me with a solid foundation of both front-end and back-end
+        technologies, enabling me to architect and deliver complete, production-ready solutions.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-plum">
+          Explore Work
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="assets/Sibulele_Mjavu_CV.pdf" download class="btn btn-outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download CV
+        </a>
       </div>
-      <div>
-        <span class="hstat-n" data-count="7">0</span>
-        <span class="hstat-l">Certifications</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-right" aria-hidden="true">
-    <div class="photo-frame rv-right">
-      <div class="photo-box">
-        <img src="assets/profile.jpg"
-             alt="Sibulele Mjavu"
-             class="photo-img"
-             loading="eager"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="photo-placeholder" style="display:none">
-          <div class="photo-initials">SM</div>
-          <span class="photo-label">Your Photo Here</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-badge">
-      <div class="hbadge-dot"></div>
-      <span class="hbadge-txt">Open to Opportunities</span>
-    </div>
-  </div>
-
-  <div class="hero-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,72 1440,0 1440,72" fill="#F8F5FC"/>
-    </svg>
-  </div>
-</section>
-
-<!-- ══════════════════════ ABOUT ══════════════════════ -->
-<section class="sec alt" id="about" aria-label="About Sibulele">
-  <div class="wrap">
-    <div class="sh rv">
-      <span class="sh-lbl"> ABOUT</span>
-      <h2 class="sh-title">The person <em>behind</em> the code</h2>
-    </div>
-    <div class="about-grid">
-      <div>
-        <blockquote class="about-quote rv" style="--d:.05s">
-          "I don't just write code, I build systems that <em>solve real problems.</em>
-          From ghost workers to lost student IDs — every project has had a human problem at its core."
-        </blockquote>
-        <p class="about-body rv" style="--d:.1s">
-          IT graduate specialising in full-stack development, with a track record of building enterprise-grade applications
-          with an <strong>80%+ average</strong> in final-year modules. Her stack spans mobile
-          (Flutter), (C#/.NET), backend (Firebase), and AI/ML (Python + NLP) — a versatile toolkit for tackling diverse challenges.
-        </p>
-        <p class="about-body rv" style="--d:.15s">
-          Her interest in <strong>IT service environments</strong> is
-          genuine; she finds the intersection of technical systems and human experience fascinating.
-          Great infrastructure that nobody can use isn't great infrastructure. She cares about both
-          the build <em>and</em> the person at the end of it.
-        </p>
-          </p>
-        <p class="about-body rv" style="--d:.15s">
-          Her academic background in <strong>Information Technology</strong> reflects
-          both her dedication to the craft and her capacity for rigorous technical
-          thinking. She is eager to bring this energy into a graduate programme, internship, or
-          junior developer role <em>and</em> where she can contribute meaningfully from day one.
-        </p>
-        <div class="about-stats rv" style="--d:.25s">
-          <div>
-            <span class="as-n" data-count="80" data-suffix="%+">—</span>
-            <span class="as-l">Final-Year Average</span>
-          </div>
-          <div>
-            <span class="as-n" data-count="4" data-suffix="+">—</span>
-            <span class="as-l">Projects Built</span>
-          </div>
-          <div>
-            <span class="as-n" data-count="7">—</span>
-            <span class="as-l">Certifications</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="rv-right" style="--d:.1s">
-        <div class="contact-card">
-          <img src="assets/profile.jpg"
-               alt="Sibulele Mjavu"
-               class="cc-avatar"
-               onerror="this.style.display='none'"/>
-          <div class="cc-name">Sibulele Mjavu</div>
-          <div class="cc-role">Mobile & Web Application Developer</div>
-          <div class="cc-div"></div>
-          <ul class="cc-list">
-            <li class="cc-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Fourways, Sandton
-            </li>
-            <li class="cc-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-              +27 69 994 7924
-            </li>
-            <li class="cc-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              mjavusibulele@gmail.com
-            </li>
-            <li class="cc-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-              github.com/MjavuSibu
-            </li>
-            <li class="cc-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              linkedin.com/in/sibulele-mjavu
-            </li>
-          </ul>
-          <div class="cc-badge">
-            <div class="cc-badge-dot"></div>
-            Open to Work
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════ SKILLS ══════════════════════ -->
-<section class="sec" id="skills" aria-label="Technical skills">
-  <div class="wrap">
-    <div class="sh rv">
-      <span class="sh-lbl">TECHNICAL SKILLS</span>
-      <h2 class="sh-title">What she <em>actually</em> knows</h2>
-    </div>
-    <div class="sk-grid">
-
-      <div class="sk-card rv" style="--d:0s">
-        <div class="sk-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3 class="sk-title">Programming Languages</h3>
-        <div class="sk-tags">
-          <span class="tag tag-p">C#</span>
-          <span class="tag tag-p">Python</span>
-          <span class="tag tag-p">Dart</span>
-        </div>
-      </div>
-
-      <div class="sk-card rv" style="--d:.07s">
-        <div class="sk-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3 class="sk-title">Frameworks &amp; Libraries</h3>
-        <div class="sk-tags">
-          <span class="tag tag-p">ASP.NET Core</span>
-          <span class="tag tag-p">ASP.NET MVC</span>
-          <span class="tag tag-p">Flutter</span>
-          <span class="tag tag-p">HTML</span>
-          <span class="tag tag-p">CSS</span>
-          <span class="tag tag-p">Pandas</span>
-          <span class="tag tag-p">NumPy</span>
-        </div>
-      </div>
-
-      <div class="sk-card rv" style="--d:.14s">
-        <div class="sk-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3 class="sk-title">Tools &amp; Platforms</h3>
-        <div class="sk-tags">
-          <span class="tag tag-p">GitHub</span>
-          <span class="tag tag-p">VS Code</span>
-          <span class="tag tag-p">PyCharm</span>
-           <span class="tag tag-p">Visual Studio</span>
-          <span class="tag tag-p">Android Studio</span>
-          <span class="tag tag-p">MS Office Administration</span>
-        </div>
-      </div>
-
-      <div class="sk-card rv" style="--d:.21s">
-        <div class="sk-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3 class="sk-title">How She Works With People</h3>
-        <div class="sk-tags">
-          <span class="tag tag-m">Team Collaboration</span>
-          <span class="tag tag-m">Communication</span>
-          <span class="tag tag-m">Time Management</span>
-          <span class="tag tag-m">Research</span>
-          <span class="tag tag-m">Resilience</span>
-          <span class="tag tag-m">Adaptability to new technologies</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════ PROJECTS ══════════════════════ -->
-<section class="sec alt" id="projects" aria-label="Selected projects">
-  <div class="wrap">
-    <div class="proj-header">
-      <div class="sh rv" style="margin-bottom:0">
-        <span class="sh-lbl"> SELECTED WORK</span>
-        <h2 class="sh-title">Things she's <em>built</em></h2>
-      </div>
-      <div class="proj-drag rv" style="--d:.1s" aria-hidden="true">
-        Drag to explore
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-    </div>
-  </div>
-
-  <div class="proj-scroll" id="projScroll" role="region" aria-label="Projects carousel">
-    <div class="proj-track">
-
-      <article class="proj-card rv" style="--d:0s">
-        <div class="proj-num" aria-hidden="true">01</div>
-        <h3 class="proj-title">VeriWork Mobile</h3>
-        <p class="proj-desc">
-          Flutter-based mobile app that enables secure, real-time employee identity
-          verification through selfie verification. Built to prevent ghost workers —
-          the kind of system that saves organisations real money from day one.
-        </p>
-        <div class="proj-tags">
-          <span class="tag tag-p">Flutter</span>
-          <span class="tag tag-p">Firebase</span>
-          <span class="tag tag-p">Dart</span>
-          <span class="tag tag-m">Mobile</span>
-          <span class="tag tag-m">Enterprise</span>
-        </div>
-        <div class="proj-actions">
-          <a href="https://github.com/MjavuSibu/VeriWork-Mobile"
-             target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </article>
-
-      <article class="proj-card rv" style="--d:.1s">
-        <div class="proj-num" aria-hidden="true">02</div>
-        <h3 class="proj-title">AI Mental Health Chatbot</h3>
-        <p class="proj-desc">
-          A caring mental health companion built with Python and machine learning.
-          Offers empathetic support and crisis detection with helpline referrals,
-          actual intent classification, not keyword matching.
-        </p>
-        <div class="proj-tags">
-          <span class="tag tag-p">Python</span>
-          <span class="tag tag-p">NLP</span>
-          <span class="tag tag-p">Pandas</span>
-          <span class="tag tag-m">AI / ML</span>
-          <span class="tag tag-m">Healthcare</span>
-        </div>
-        <div class="proj-actions">
-          <a href="https://github.com/MjavuSibu/AI-Based_MentalHealth_Chatbot"
-             target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </article>
-
-      <article class="proj-card rv" style="--d:.2s">
-        <div class="proj-num" aria-hidden="true">03</div>
-        <h3 class="proj-title">Campus Lost &amp; Found App</h3>
-        <p class="proj-desc">
-          Mobile app that helps students quickly report, search, and recover lost
-          or found items across campus. Replaced chaotic WhatsApp notice boards
-          with a clean, searchable real-time system.
-        </p>
-        <div class="proj-tags">
-          <span class="tag tag-p">Flutter</span>
-          <span class="tag tag-p">Dart</span>
-          <span class="tag tag-m">Mobile</span>
-          <span class="tag tag-m">UX Design</span>
-        </div>
-        <div class="proj-actions">
-          <a href="https://github.com/MjavuSibu/Lost-and-Found-Campus-App"
-             target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </article>
-
-      <article class="proj-card rv" style="--d:.3s">
-        <div class="proj-num" aria-hidden="true">04</div>
-        <h3 class="proj-title">HealthSpark</h3>
-        <p class="proj-desc">
-          A health monitoring system with dedicated patient, doctor, and admin portals.
-          Built to streamline healthcare workflows and give each user role exactly
-          the access and tools they need.
-        </p>
-        <div class="proj-tags">
-          <span class="tag tag-p">ASP.NET</span>
-          <span class="tag tag-p">C#</span>
-          <span class="tag tag-m">Healthcare</span>
-          <span class="tag tag-m">Multi-Portal</span>
-          <span class="tag tag-m">Web</span>
-        </div>
-        <div class="proj-actions">
-          <a href="https://github.com/MjavuSibu/HealthSpark"
-             target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════ EDUCATION ══════════════════════ -->
-<section class="sec" id="education" aria-label="Education">
-  <div class="wrap">
-    <div class="sh rv">
-      <span class="sh-lbl">EDUCATION</span>
-      <h2 class="sh-title">Where it <em>started</em></h2>
-    </div>
-
-    <div class="edu-card rv">
-      <div class="edu-years">
-        <span class="edu-yr">2022</span>
-        <div class="edu-yr-line"></div>
-        <span class="edu-yr">2025</span>
-      </div>
-      <div class="edu-body">
-        <span class="edu-pill">Diploma</span>
-        <h3 class="edu-degree">Diploma in Information Technology</h3>
-        <p class="edu-inst">Central University of Technology</p>
-        <p class="edu-loc">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          South Africa
-        </p>
-        <div class="edu-ach">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          Achieved 80%+ average in final-year modules
-        </div>
-        <span class="edu-cl">Key Coursework</span>
-        <div class="edu-tags">
-          <span class="tag tag-p">Software Development</span>
-          <span class="tag tag-p">Technical Programming</span>
-          <span class="tag tag-p">Software Engineering</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="edu-card rv" style="--d:.1s">
-      <div class="edu-years">
-        <span class="edu-yr">2025</span>
-        <div class="edu-yr-line"></div>
-        <span class="edu-yr">2026</span>
-      </div>
-      <div class="edu-body">
-        <span class="edu-pill">Certificate Programme</span>
-        <h3 class="edu-degree">Artificial Intelligence &amp; Python Programming</h3>
-        <p class="edu-inst">Samsung Innovation Campus</p>
-        <p class="edu-loc">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          South Africa · Mar 2025 – Feb 2026
-        </p>
-        <div class="edu-ach">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Graduated February 2026
-        </div>
-        <span class="edu-cl">Specialised Coursework</span>
-        <div class="edu-tags">
-          <span class="tag tag-p">Artificial Intelligence</span>
-          <span class="tag tag-p">Python Coding</span>
-          <span class="tag tag-p">Programming</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════ CERTIFICATIONS ══════════════════════ -->
-<section class="sec alt" id="certs" aria-label="Certifications">
-  <div class="wrap">
-    <div class="sh rv">
-      <span class="sh-lbl">CREDENTIALS</span>
-      <h2 class="sh-title">Proof of <em>effort</em></h2>
-    </div>
-    <div class="cert-grid">
-
-      <a href="assets/ITEssentials.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv" style="--d:0s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-        <span class="cert-iss">Cisco</span>
-        <h3 class="cert-name">IT Essentials</h3>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-      <a href="assets/Cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv" style="--d:.05s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <span class="cert-iss">Cisco</span>
-        <h3 class="cert-name">Introduction to Cybersecurity</h3>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-      <a href="assets/PythonEssentials.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv" style="--d:.10s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-        <span class="cert-iss">Cisco</span>
-        <h3 class="cert-name">Python Essentials 1</h3>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-      <a href="assets/ModernAI.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv" style="--d:.15s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <span class="cert-iss">Cisco</span>
-        <h3 class="cert-name">Introduction to Modern AI</h3>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-      <a href="assets/DataScience.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv" style="--d:.20s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-        <span class="cert-iss">Cisco</span>
-        <h3 class="cert-name">Introduction to Data Science</h3>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-      <a href="assets/AI_Samsung.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-feat cert-card-link rv" style="--d:.25s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <span class="cert-iss">Samsung Innovation Campus</span>
-        <h3 class="cert-name">AI &amp; Python Coding and Programming</h3>
-        <span class="cert-year">2025</span>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-      <a href="assets/CodingProgramming.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv" style="--d:.30s">
-        <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-        <span class="cert-iss">Samsung Innovation Campus</span>
-        <h3 class="cert-name">Coding &amp; Programming</h3>
-        <span class="cert-pdf-badge">View PDF</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════ CONTACT ══════════════════════ -->
-<section class="contact-sec" id="contact" aria-label="Contact">
-  <div class="wrap">
-    <div class="sh rv">
-      <span class="sh-lbl">CONTACT</span>
-      <h2 class="sh-title">Let's <em>talk</em></h2>
-    </div>
-    <p class="contact-intro rv">
-      Actively looking for graduate opportunities, internships, and junior developer roles.
-      If something interesting is on the table, she wants to hear about it. No fluff — just a conversation.
-    </p>
-
-    <div class="contact-grid">
-      <a href="mailto:mjavusibulele@gmail.com" class="cc2 rv" style="--d:0s">
-        <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <span class="cc2-lbl">Email</span>
-        <span class="cc2-val">mjavusibulele@gmail.com</span>
-      </a>
-      <a href="tel:+27699947924" class="cc2 rv" style="--d:.07s">
-        <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <span class="cc2-lbl">Phone</span>
-        <span class="cc2-val">+27 69 994 7924</span>
-      </a>
-      <a href="https://www.linkedin.com/in/sibulele-mjavu-57139b38a" target="_blank" rel="noopener noreferrer" class="cc2 rv" style="--d:.14s">
-        <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-        <span class="cc2-lbl">LinkedIn</span>
-        <span class="cc2-val">linkedin.com/in/sibulele-mjavu</span>
-      </a>
-      <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="cc2 rv" style="--d:.21s">
-        <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
-        <span class="cc2-lbl">GitHub</span>
-        <span class="cc2-val">github.com/MjavuSibu</span>
-      </a>
-    </div>
-
-    <div class="cv-strip rv" id="cv-download">
-      <div>
-        <p class="cv-text">Her CV has the full picture — <em>download it</em> and see if it's a fit.</p>
-        <p class="cv-meta">PDF · Updated 2025</p>
-      </div>
-      <a href="assets/Sibulele_Mjavu_CV.pdf" download class="btn btn-berry">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download CV
-      </a>
-    </div>
-
-    <footer class="footer" role="contentinfo">
-      <div class="footer-in">
-        <span class="footer-brand">Sibulele Mjavu</span>
-        <p class="footer-copy">&copy; <span id="yr"></span> · Built with purpose. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:mjavusibulele@gmail.com" class="footer-link" aria-label="Email">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-          <a href="tel:+27699947924" class="footer-link" aria-label="Phone">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/sibulele-mjavu" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-          </a>
-          <a href="assets/Sibulele_Mjavu_CV.pdf" download class="footer-link" aria-label="Download CV">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </div>
-</section>
-
-<!-- ══════════════════════ CHATBOT ══════════════════════ -->
-<div id="chat-bubble">
-  <div class="chat-window" id="chatWindow">
-    <div class="chat-header">
-      <div class="chat-header-left">
-        <div class="chat-avatar">SB</div>
+      <div class="hero-stats">
         <div>
-          <div class="chat-hname">Sibu Bot</div>
-          <div class="chat-hsub">Knows her CV better than she does</div>
+          <span class="hstat-n" data-count="80" data-suffix="%+">0</span>
+          <span class="hstat-l">Final-Year Avg.</span>
+        </div>
+        <div>
+          <span class="hstat-n" data-count="4" data-suffix="+">0</span>
+          <span class="hstat-l">Projects Built</span>
+        </div>
+        <div>
+          <span class="hstat-n" data-count="7">0</span>
+          <span class="hstat-l">Certifications</span>
         </div>
       </div>
-      <button class="chat-close" id="chatClose" aria-label="Close chat">&#x2715;</button>
     </div>
-    <div class="chat-msgs" id="chatMsgs"></div>
-    <div class="chat-sugs" id="chatSugs">
-      <button class="sug" data-q="What projects has she built?">Projects?</button>
-      <button class="sug" data-q="What's her technical stack?">Stack?</button>
-      <button class="sug" data-q="Is she available for hire?">Available?</button>
-      <button class="sug" data-q="What makes her stand out?">Why her?</button>
-    </div>
-    <div class="chat-input-area">
-      <textarea class="chat-input" id="chatInput" rows="1" placeholder="Ask anything about Sibulele…"></textarea>
-      <button class="chat-send" id="chatSend" aria-label="Send">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
-    </div>
-  </div>
-  <button class="chat-toggle" id="chatToggle" aria-label="Open chat" aria-expanded="false">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-    Ask Sibu Bot
-    <span class="chat-unread" id="chatUnread">1</span>
-  </button>
-</div>
 
-<script src="js/main.js"></script>
+    <div class="hero-right" aria-hidden="true">
+      <div class="photo-frame rv-right">
+        <div class="photo-box">
+          <img src="assets/profile.jpg" alt="Sibulele Mjavu" class="photo-img" loading="eager"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="photo-placeholder" style="display:none">
+            <div class="photo-initials">SM</div>
+            <span class="photo-label">Your Photo Here</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <div class="hbadge-dot"></div>
+        <span class="hbadge-txt">Open to Opportunities</span>
+      </div>
+    </div>
+
+    <div class="hero-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,72 1440,0 1440,72" fill="#F8F5FC" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ ABOUT ══════════════════════ -->
+  <section class="sec alt" id="about" aria-label="About Sibulele">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="sh-lbl"> ABOUT</span>
+        <h2 class="sh-title">The person <em>behind</em> the code</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <blockquote class="about-quote rv" style="--d:.05s">
+            "I don't just write code, I build systems that <em>solve real problems.</em>
+            From ghost workers to lost student IDs — every project has had a human problem at its core."
+          </blockquote>
+          <p class="about-body rv" style="--d:.1s">
+            IT graduate specialising in full-stack development, with a track record of building enterprise-grade
+            applications
+            with an <strong>80%+ average</strong> in final-year modules. Her stack spans mobile
+            (Flutter), (C#/.NET), backend (Firebase), and AI/ML (Python + NLP) — a versatile toolkit for tackling
+            diverse challenges.
+          </p>
+          <p class="about-body rv" style="--d:.15s">
+            Her interest in <strong>IT service environments</strong> is
+            genuine; she finds the intersection of technical systems and human experience fascinating.
+            Great infrastructure that nobody can use isn't great infrastructure. She cares about both
+            the build <em>and</em> the person at the end of it.
+          </p>
+          </p>
+          <p class="about-body rv" style="--d:.15s">
+            Her academic background in <strong>Information Technology</strong> reflects
+            both her dedication to the craft and her capacity for rigorous technical
+            thinking. She is eager to bring this energy into a graduate programme, internship, or
+            junior developer role <em>and</em> where she can contribute meaningfully from day one.
+          </p>
+          <div class="about-stats rv" style="--d:.25s">
+            <div>
+              <span class="as-n" data-count="80" data-suffix="%+">—</span>
+              <span class="as-l">Final-Year Average</span>
+            </div>
+            <div>
+              <span class="as-n" data-count="4" data-suffix="+">—</span>
+              <span class="as-l">Projects Built</span>
+            </div>
+            <div>
+              <span class="as-n" data-count="7">—</span>
+              <span class="as-l">Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rv-right" style="--d:.1s">
+          <div class="contact-card">
+            <img src="assets/profile.jpg" alt="Sibulele Mjavu" class="cc-avatar" onerror="this.style.display='none'" />
+            <div class="cc-name">Sibulele Mjavu</div>
+            <div class="cc-role">Mobile & Web Application Developer</div>
+            <div class="cc-div"></div>
+            <ul class="cc-list">
+              <li class="cc-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Fourways, Sandton
+              </li>
+              <li class="cc-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
+                +27 69 994 7924
+              </li>
+              <li class="cc-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                mjavusibulele@gmail.com
+              </li>
+              <li class="cc-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+                github.com/MjavuSibu
+              </li>
+              <li class="cc-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                linkedin.com/in/sibulele-mjavu
+              </li>
+            </ul>
+            <div class="cc-badge">
+              <div class="cc-badge-dot"></div>
+              Open to Work
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SKILLS ══════════════════════ -->
+  <section class="sec" id="skills" aria-label="Technical skills">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="sh-lbl">TECHNICAL SKILLS</span>
+        <h2 class="sh-title">What she <em>actually</em> knows</h2>
+      </div>
+      <div class="sk-grid">
+
+        <div class="sk-card rv" style="--d:0s">
+          <div class="sk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 class="sk-title">Programming Languages</h3>
+          <div class="sk-tags">
+            <span class="tag tag-p">C#</span>
+            <span class="tag tag-p">Python</span>
+            <span class="tag tag-p">Dart</span>
+          </div>
+        </div>
+
+        <div class="sk-card rv" style="--d:.07s">
+          <div class="sk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3 class="sk-title">Frameworks &amp; Libraries</h3>
+          <div class="sk-tags">
+            <span class="tag tag-p">ASP.NET Core</span>
+            <span class="tag tag-p">ASP.NET MVC</span>
+            <span class="tag tag-p">Flutter</span>
+            <span class="tag tag-p">HTML</span>
+            <span class="tag tag-p">CSS</span>
+            <span class="tag tag-p">Pandas</span>
+            <span class="tag tag-p">NumPy</span>
+          </div>
+        </div>
+
+        <div class="sk-card rv" style="--d:.14s">
+          <div class="sk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3 class="sk-title">Tools &amp; Platforms</h3>
+          <div class="sk-tags">
+            <span class="tag tag-p">GitHub</span>
+            <span class="tag tag-p">VS Code</span>
+            <span class="tag tag-p">PyCharm</span>
+            <span class="tag tag-p">Visual Studio</span>
+            <span class="tag tag-p">Android Studio</span>
+            <span class="tag tag-p">MS Office Administration</span>
+          </div>
+        </div>
+
+        <div class="sk-card rv" style="--d:.21s">
+          <div class="sk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+            </svg>
+          </div>
+          <h3 class="sk-title">How She Works With People</h3>
+          <div class="sk-tags">
+            <span class="tag tag-m">Team Collaboration</span>
+            <span class="tag tag-m">Communication</span>
+            <span class="tag tag-m">Time Management</span>
+            <span class="tag tag-m">Research</span>
+            <span class="tag tag-m">Resilience</span>
+            <span class="tag tag-m">Adaptability to new technologies</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
+  <section class="sec alt" id="projects" aria-label="Selected projects">
+    <div class="wrap">
+      <div class="proj-header">
+        <div class="sh rv" style="margin-bottom:0">
+          <span class="sh-lbl"> SELECTED WORK</span>
+          <h2 class="sh-title">Things she's <em>built</em></h2>
+        </div>
+        <div class="proj-drag rv" style="--d:.1s" aria-hidden="true">
+          Drag to explore
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-scroll" id="projScroll" role="region" aria-label="Projects carousel">
+      <div class="proj-track">
+
+        <article class="proj-card rv" style="--d:0s">
+          <div class="proj-num" aria-hidden="true">01</div>
+          <h3 class="proj-title">VeriWork Mobile</h3>
+          <p class="proj-desc">
+            Flutter-based mobile app that enables secure, real-time employee identity
+            verification through selfie verification. Built to prevent ghost workers —
+            the kind of system that saves organisations real money from day one.
+          </p>
+          <div class="proj-tags">
+            <span class="tag tag-p">Flutter</span>
+            <span class="tag tag-p">Firebase</span>
+            <span class="tag tag-p">Dart</span>
+            <span class="tag tag-m">Mobile</span>
+            <span class="tag tag-m">Enterprise</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/MjavuSibu/VeriWork-Mobile" target="_blank" rel="noopener noreferrer"
+              class="btn btn-ghost">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card rv" style="--d:.1s">
+          <div class="proj-num" aria-hidden="true">02</div>
+          <h3 class="proj-title">AI Mental Health Chatbot</h3>
+          <p class="proj-desc">
+            A caring mental health companion built with Python and machine learning.
+            Offers empathetic support and crisis detection with helpline referrals,
+            actual intent classification, not keyword matching.
+          </p>
+          <div class="proj-tags">
+            <span class="tag tag-p">Python</span>
+            <span class="tag tag-p">NLP</span>
+            <span class="tag tag-p">Pandas</span>
+            <span class="tag tag-m">AI / ML</span>
+            <span class="tag tag-m">Healthcare</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/MjavuSibu/AI-Based_MentalHealth_Chatbot" target="_blank"
+              rel="noopener noreferrer" class="btn btn-ghost">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card rv" style="--d:.2s">
+          <div class="proj-num" aria-hidden="true">03</div>
+          <h3 class="proj-title">Campus Lost &amp; Found App</h3>
+          <p class="proj-desc">
+            Mobile app that helps students quickly report, search, and recover lost
+            or found items across campus. Replaced chaotic WhatsApp notice boards
+            with a clean, searchable real-time system.
+          </p>
+          <div class="proj-tags">
+            <span class="tag tag-p">Flutter</span>
+            <span class="tag tag-p">Dart</span>
+            <span class="tag tag-m">Mobile</span>
+            <span class="tag tag-m">UX Design</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/MjavuSibu/Lost-and-Found-Campus-App" target="_blank" rel="noopener noreferrer"
+              class="btn btn-ghost">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card rv" style="--d:.3s">
+          <div class="proj-num" aria-hidden="true">04</div>
+          <h3 class="proj-title">HealthSpark</h3>
+          <p class="proj-desc">
+            A health monitoring system with dedicated patient, doctor, and admin portals.
+            Built to streamline healthcare workflows and give each user role exactly
+            the access and tools they need.
+          </p>
+          <div class="proj-tags">
+            <span class="tag tag-p">ASP.NET</span>
+            <span class="tag tag-p">C#</span>
+            <span class="tag tag-m">Healthcare</span>
+            <span class="tag tag-m">Multi-Portal</span>
+            <span class="tag tag-m">Web</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/MjavuSibu/HealthSpark" target="_blank" rel="noopener noreferrer"
+              class="btn btn-ghost">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EDUCATION ══════════════════════ -->
+  <section class="sec" id="education" aria-label="Education">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="sh-lbl">EDUCATION</span>
+        <h2 class="sh-title">Where it <em>started</em></h2>
+      </div>
+
+      <div class="edu-card rv">
+        <div class="edu-years">
+          <span class="edu-yr">2022</span>
+          <div class="edu-yr-line"></div>
+          <span class="edu-yr">2025</span>
+        </div>
+        <div class="edu-body">
+          <span class="edu-pill">Diploma</span>
+          <h3 class="edu-degree">Diploma in Information Technology</h3>
+          <p class="edu-inst">Central University of Technology</p>
+          <p class="edu-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            South Africa
+          </p>
+          <div class="edu-ach">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            Achieved 80%+ average in final-year modules
+          </div>
+          <span class="edu-cl">Key Coursework</span>
+          <div class="edu-tags">
+            <span class="tag tag-p">Software Development</span>
+            <span class="tag tag-p">Technical Programming</span>
+            <span class="tag tag-p">Software Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card rv" style="--d:.1s">
+        <div class="edu-years">
+          <span class="edu-yr">2025</span>
+          <div class="edu-yr-line"></div>
+          <span class="edu-yr">2026</span>
+        </div>
+        <div class="edu-body">
+          <span class="edu-pill">Certificate Programme</span>
+          <h3 class="edu-degree">Artificial Intelligence &amp; Python Programming</h3>
+          <p class="edu-inst">Samsung Innovation Campus</p>
+          <p class="edu-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            South Africa · Mar 2025 – Feb 2026
+          </p>
+          <div class="edu-ach">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            Graduated February 2026
+          </div>
+          <span class="edu-cl">Specialised Coursework</span>
+          <div class="edu-tags">
+            <span class="tag tag-p">Artificial Intelligence</span>
+            <span class="tag tag-p">Python Coding</span>
+            <span class="tag tag-p">Programming</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CERTIFICATIONS ══════════════════════ -->
+  <section class="sec alt" id="certs" aria-label="Certifications">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="sh-lbl">CREDENTIALS</span>
+        <h2 class="sh-title">Proof of <em>effort</em></h2>
+      </div>
+      <div class="cert-grid">
+
+        <a href="assets/ITEssentials.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv"
+          style="--d:0s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg></div>
+          <span class="cert-iss">Cisco</span>
+          <h3 class="cert-name">IT Essentials</h3>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+        <a href="assets/Cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv"
+          style="--d:.05s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></div>
+          <span class="cert-iss">Cisco</span>
+          <h3 class="cert-name">Introduction to Cybersecurity</h3>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+        <a href="assets/PythonEssentials.pdf" target="_blank" rel="noopener noreferrer"
+          class="cert-card cert-card-link rv" style="--d:.10s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg></div>
+          <span class="cert-iss">Cisco</span>
+          <h3 class="cert-name">Python Essentials 1</h3>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+        <a href="assets/ModernAI.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv"
+          style="--d:.15s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg></div>
+          <span class="cert-iss">Cisco</span>
+          <h3 class="cert-name">Introduction to Modern AI</h3>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+        <a href="assets/DataScience.pdf" target="_blank" rel="noopener noreferrer" class="cert-card cert-card-link rv"
+          style="--d:.20s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg></div>
+          <span class="cert-iss">Cisco</span>
+          <h3 class="cert-name">Introduction to Data Science</h3>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+        <a href="assets/AI_Samsung.pdf" target="_blank" rel="noopener noreferrer"
+          class="cert-card cert-feat cert-card-link rv" style="--d:.25s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg></div>
+          <span class="cert-iss">Samsung Innovation Campus</span>
+          <h3 class="cert-name">AI &amp; Python Coding and Programming</h3>
+          <span class="cert-year">2025</span>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+        <a href="assets/CodingProgramming.pdf" target="_blank" rel="noopener noreferrer"
+          class="cert-card cert-card-link rv" style="--d:.30s">
+          <div class="cert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg></div>
+          <span class="cert-iss">Samsung Innovation Campus</span>
+          <h3 class="cert-name">Coding &amp; Programming</h3>
+          <span class="cert-pdf-badge">View PDF</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CONTACT ══════════════════════ -->
+  <section class="contact-sec" id="contact" aria-label="Contact">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="sh-lbl">CONTACT</span>
+        <h2 class="sh-title">Let's <em>talk</em></h2>
+      </div>
+      <p class="contact-intro rv">
+        Actively looking for graduate opportunities, internships, and junior developer roles.
+        If something interesting is on the table, she wants to hear about it. No fluff — just a conversation.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:mjavusibulele@gmail.com" class="cc2 rv" style="--d:0s">
+          <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></div>
+          <span class="cc2-lbl">Email</span>
+          <span class="cc2-val">mjavusibulele@gmail.com</span>
+        </a>
+        <a href="tel:+27699947924" class="cc2 rv" style="--d:.07s">
+          <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg></div>
+          <span class="cc2-lbl">Phone</span>
+          <span class="cc2-val">+27 69 994 7924</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sibulele-mjavu-57139b38a" target="_blank" rel="noopener noreferrer"
+          class="cc2 rv" style="--d:.14s">
+          <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></div>
+          <span class="cc2-lbl">LinkedIn</span>
+          <span class="cc2-val">linkedin.com/in/sibulele-mjavu</span>
+        </a>
+        <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="cc2 rv"
+          style="--d:.21s">
+          <div class="cc2-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+            </svg></div>
+          <span class="cc2-lbl">GitHub</span>
+          <span class="cc2-val">github.com/MjavuSibu</span>
+        </a>
+      </div>
+
+      <div class="cv-strip rv" id="cv-download">
+        <div>
+          <p class="cv-text">Her CV has the full picture — <em>download it</em> and see if it's a fit.</p>
+          <p class="cv-meta">PDF · Updated 2025</p>
+        </div>
+        <a href="assets/Sibulele_Mjavu_CV.pdf" download class="btn btn-berry">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download CV
+        </a>
+      </div>
+
+      <footer class="footer" role="contentinfo">
+        <div class="footer-in">
+          <span class="footer-brand">Sibulele Mjavu</span>
+          <p class="footer-copy">&copy; <span id="yr"></span> · Built with purpose. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="mailto:mjavusibulele@gmail.com" class="footer-link" aria-label="Email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+            <a href="tel:+27699947924" class="footer-link" aria-label="Phone">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/sibulele-mjavu" target="_blank" rel="noopener noreferrer"
+              class="footer-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://github.com/MjavuSibu" target="_blank" rel="noopener noreferrer" class="footer-link"
+              aria-label="GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+            </a>
+            <a href="assets/Sibulele_Mjavu_CV.pdf" download class="footer-link" aria-label="Download CV">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CHATBOT ══════════════════════ -->
+  <div id="chat-bubble">
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <div class="chat-avatar">SB</div>
+          <div>
+            <div class="chat-hname">Sibu Bot</div>
+            <div class="chat-hsub">Knows her CV better than she does</div>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">&#x2715;</button>
+      </div>
+      <div class="chat-msgs" id="chatMsgs"></div>
+      <div class="chat-sugs" id="chatSugs">
+        <button class="sug" data-q="What projects has she built?">Projects?</button>
+        <button class="sug" data-q="What's her technical stack?">Stack?</button>
+        <button class="sug" data-q="Is she available for hire?">Available?</button>
+        <button class="sug" data-q="What makes her stand out?">Why her?</button>
+      </div>
+      <div class="chat-input-area">
+        <textarea class="chat-input" id="chatInput" rows="1" placeholder="Ask anything about Sibulele…"></textarea>
+        <button class="chat-send" id="chatSend" aria-label="Send">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      </svg>
+      Ask Sibu Bot
+      <span class="chat-unread" id="chatUnread">1</span>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
