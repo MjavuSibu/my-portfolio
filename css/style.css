@@ -513,8 +513,8 @@ strong {
 .mob {
   position: fixed;
   inset: 0;
-  background: var(--bg);
-  z-index: 950;
+  background: #FFFFFF;
+  z-index: 960;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -532,14 +532,15 @@ strong {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.25rem;
+  gap: 1.5rem;
 }
 
 .mob-a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-style: italic;
-  font-weight: 300;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
   color: var(--ink2);
   transition: color .2s;
 }
@@ -949,7 +950,7 @@ strong {
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color:#5CB85C;
+  color: #5CB85C;
 }
 
 .hero-divider {
