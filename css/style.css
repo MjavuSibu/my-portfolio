@@ -533,10 +533,10 @@ strong {
   background: none;
   border: 2px solid var(--border);
   border-radius: 50%;
-  width: 32px;
+  width: 30px;
   height: 32px;
   font-size: 2rem;
-  color: var(--ink);
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
