@@ -59,6 +59,8 @@
     document.body.style.overflow = open ? 'hidden' : '';
   }
   hbg.addEventListener('click', toggle);
+  var mobClose = document.getElementById('mobClose');
+  if (mobClose) mobClose.addEventListener('click', toggle);
   mob.querySelectorAll('.mob-a').forEach(function (a) {
     a.addEventListener('click', function () { if (open) toggle(); });
   });
@@ -133,7 +135,7 @@ function animateCounter(el) {
 
 /* ── ACTIVE NAV LINKS ───────────────────────────── */
 (function () {
-  var secs  = document.querySelectorAll('section[id]');
+  var secs = document.querySelectorAll('section[id]');
   var links = document.querySelectorAll('.nav-a[href^="#"]');
   if (!secs.length || !links.length) return;
   var obs = new IntersectionObserver(function (entries) {
@@ -154,22 +156,22 @@ function animateCounter(el) {
   var isDown = false, startX = 0, scrollLeft = 0;
   el.addEventListener('mousedown', function (e) { isDown = true; startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft; el.style.userSelect = 'none'; });
   el.addEventListener('mouseleave', function () { isDown = false; el.style.userSelect = ''; });
-  el.addEventListener('mouseup',    function () { isDown = false; el.style.userSelect = ''; });
-  el.addEventListener('mousemove',  function (e) { if (!isDown) return; e.preventDefault(); el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX) * 1.4; });
+  el.addEventListener('mouseup', function () { isDown = false; el.style.userSelect = ''; });
+  el.addEventListener('mousemove', function (e) { if (!isDown) return; e.preventDefault(); el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX) * 1.4; });
 })();
 
 /* ── 3D CARD TILT ───────────────────────────────── */
 document.querySelectorAll('.proj-card').forEach(function (card) {
   card.addEventListener('mousemove', function (e) {
     var r = card.getBoundingClientRect();
-    var rx = ((e.clientY - r.top  - r.height / 2) / (r.height / 2)) * 6;
-    var ry = ((e.clientX - r.left - r.width  / 2) / (r.width  / 2)) * -6;
+    var rx = ((e.clientY - r.top - r.height / 2) / (r.height / 2)) * 6;
+    var ry = ((e.clientX - r.left - r.width / 2) / (r.width / 2)) * -6;
     card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-4px)';
     card.style.transition = 'transform .05s';
   });
   card.addEventListener('mouseleave', function () {
     card.style.transition = 'transform .6s cubic-bezier(.22,1,.36,1)';
-    card.style.transform  = 'perspective(900px) rotateX(0) rotateY(0) translateY(0)';
+    card.style.transform = 'perspective(900px) rotateX(0) rotateY(0) translateY(0)';
   });
 });
 
@@ -179,14 +181,14 @@ if (yr) yr.textContent = new Date().getFullYear();
 
 /* ── CHATBOT ────────────────────────────────────── */
 (function () {
-  var toggle   = document.getElementById('chatToggle');
-  var win      = document.getElementById('chatWindow');
+  var toggle = document.getElementById('chatToggle');
+  var win = document.getElementById('chatWindow');
   var closeBtn = document.getElementById('chatClose');
-  var input    = document.getElementById('chatInput');
-  var sendBtn  = document.getElementById('chatSend');
-  var msgs     = document.getElementById('chatMsgs');
-  var unread   = document.getElementById('chatUnread');
-  var sugs     = document.getElementById('chatSugs');
+  var input = document.getElementById('chatInput');
+  var sendBtn = document.getElementById('chatSend');
+  var msgs = document.getElementById('chatMsgs');
+  var unread = document.getElementById('chatUnread');
+  var sugs = document.getElementById('chatSugs');
   if (!toggle || !win) return;
 
   var isOpen = false, isLoading = false, firstOpen = true;
@@ -203,7 +205,7 @@ if (yr) yr.textContent = new Date().getFullYear();
 
   function showTyping() {
     var wrap = document.createElement('div'); wrap.className = 'msg bot'; wrap.id = 'typingMsg';
-    var ico  = document.createElement('div'); ico.className = 'msg-ico'; ico.textContent = 'SB';
+    var ico = document.createElement('div'); ico.className = 'msg-ico'; ico.textContent = 'SB';
     var dots = document.createElement('div'); dots.className = 'typing-dots';
     dots.innerHTML = '<span></span><span></span><span></span>';
     wrap.appendChild(ico); wrap.appendChild(dots); msgs.appendChild(wrap); msgs.scrollTop = msgs.scrollHeight;
