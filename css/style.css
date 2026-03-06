@@ -514,6 +514,8 @@ strong {
   position: fixed;
   top: var(--nav-h);
   right: 0;
+  left: auto;
+  bottom: auto;
   width: 220px;
   background: #FFFFFF;
   border: 1px solid var(--border);
