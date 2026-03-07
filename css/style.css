@@ -531,19 +531,7 @@ strong {
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
-.mob-close button {
-  background: none;
-  border: 2px solid var(--border);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  font-size: 2rem;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
+
 .mob-links {
   display: flex;
   flex-direction: column;
