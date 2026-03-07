@@ -522,10 +522,14 @@ strong {
   border-radius: 0 0 0 8px;
   box-shadow: -4px 4px 24px rgba(74,40,104,.12);
   z-index: 960;
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
   padding: 1.25rem 1.5rem 1.5rem;
 }
-.mob.open { display: block; }
+.mob.open {
+  visibility: visible;
+  pointer-events: all;
+}
 .mob-close {
   display: flex;
   justify-content: flex-end;
