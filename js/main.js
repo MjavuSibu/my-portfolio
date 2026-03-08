@@ -228,7 +228,7 @@ if (yr) yr.textContent = new Date().getFullYear();
         body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, system: SYSTEM, messages: history })
       });
       var data = await res.json();
-      var reply = (data.content || []).map(function (b) { return b.text || ''; }).join('') || 'Something went sideways. Try again — or email her directly.';
+      var reply = (data.content || []).map(function (b) { return b.text || ''; }).join('') || 'Something went sideways. Try again or email her directly.';
       typingEl.remove(); history.push({ role: 'assistant', content: reply }); addMsg(reply, 'bot');
     } catch (err) {
       typingEl.remove(); addMsg('Network issue. Her email always works: mjavusibulele@gmail.com', 'bot');
@@ -238,7 +238,7 @@ if (yr) yr.textContent = new Date().getFullYear();
 
   function openChat() {
     isOpen = true; win.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); unread.style.display = 'none';
-    if (firstOpen) { firstOpen = false; setTimeout(function () { addMsg("Hey — I'm SibuBot. Ask me about Sibulele's projects, stack, certifications, or why you should hire her.", 'bot'); }, 350); }
+    if (firstOpen) { firstOpen = false; setTimeout(function () { addMsg("Hey! I'm Sibu's Bot. Ask me about Sibulele's projects, stack, certifications, or why you should hire her.", 'bot'); }, 350); }
   }
   function closeChat() { isOpen = false; win.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
 
