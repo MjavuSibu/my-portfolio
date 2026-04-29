@@ -793,8 +793,8 @@ button,
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(3.75rem, 6vw, 7rem);
   font-weight: 300;
-  line-height: .88;
-  letter-spacing: -.02em;
+  line-height: .85;
+  letter-spacing: -.01em;
   margin-bottom: 1.75rem;
   color: var(--ink);
   opacity: 0;
