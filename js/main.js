@@ -249,3 +249,134 @@ if (yr) yr.textContent = new Date().getFullYear();
   input.addEventListener('input', function () { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 96) + 'px'; });
   sugs.querySelectorAll('.sug').forEach(function (btn) { btn.addEventListener('click', function () { send(btn.dataset.q); }); });
 })();
+
+/* ── CONTACT FORM ─────────────────────────────────── */
+(function () {
+  var form     = document.getElementById('contactForm');
+  var success  = document.getElementById('cformSuccess');
+  var submitBtn = document.getElementById('cformSubmit');
+  var resetBtn = document.getElementById('cformReset');
+
+  if (!form) return;
+
+  var nameInput  = document.getElementById('cf-name');
+  var emailInput = document.getElementById('cf-email');
+  var msgInput   = document.getElementById('cf-msg');
+  var errName    = document.getElementById('err-name');
+  var errEmail   = document.getElementById('err-email');
+  var errMsg     = document.getElementById('err-msg');
+
+  function isValidEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+  }
+
+  function setErr(input, errEl, msg) {
+    errEl.textContent = msg;
+    if (msg) {
+      input.classList.add('is-err');
+    } else {
+      input.classList.remove('is-err');
+    }
+  }
+
+  function validate() {
+    var ok = true;
+
+    if (!nameInput.value.trim()) {
+      setErr(nameInput, errName, 'Please enter your name.');
+      ok = false;
+    } else {
+      setErr(nameInput, errName, '');
+    }
+
+    if (!emailInput.value.trim()) {
+      setErr(emailInput, errEmail, 'Please enter your email address.');
+      ok = false;
+    } else if (!isValidEmail(emailInput.value)) {
+      setErr(emailInput, errEmail, 'Please enter a valid email address.');
+      ok = false;
+    } else {
+      setErr(emailInput, errEmail, '');
+    }
+
+    if (!msgInput.value.trim()) {
+      setErr(msgInput, errMsg, 'Please enter a message.');
+      ok = false;
+    } else if (msgInput.value.trim().length < 10) {
+      setErr(msgInput, errMsg, 'Message is too short — at least 10 characters please.');
+      ok = false;
+    } else {
+      setErr(msgInput, errMsg, '');
+    }
+
+    return ok;
+  }
+
+  /* Clear error on input so feedback is instant */
+  [nameInput, emailInput, msgInput].forEach(function (el) {
+    el.addEventListener('input', function () {
+      el.classList.remove('is-err');
+      var errEl = document.getElementById('err-' + el.id.replace('cf-', ''));
+      if (errEl) errEl.textContent = '';
+    });
+  });
+
+  submitBtn.addEventListener('click', function () {
+    if (!validate()) return;
+
+    /* Disable button and show loading state */
+    submitBtn.disabled = true;
+    submitBtn.querySelector('.cform-btn-text').textContent = 'Sending…';
+
+    /* POST to Formspree */
+    fetch('https://formspree.io/f/mqewroze', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    nameInput.value.trim(),
+        email:   emailInput.value.trim(),
+        message: msgInput.value.trim()
+      })
+    })
+    .then(function (res) {
+      if (res.ok) {
+        /* Success — hide form, show success card */
+        form.style.display = 'none';
+        success.classList.add('visible');
+      } else {
+        /* Formspree returned an error */
+        return res.json().then(function (data) {
+          var msg = (data && data.errors)
+            ? data.errors.map(function (e) { return e.message; }).join(', ')
+            : 'Something went wrong. Please try emailing directly.';
+          setErr(msgInput, errMsg, msg);
+          submitBtn.disabled = false;
+          submitBtn.querySelector('.cform-btn-text').textContent = 'Send Message';
+        });
+      }
+    })
+    .catch(function () {
+      /* Network error */
+      setErr(msgInput, errMsg, 'Network error. Please try emailing mjavusibulele@gmail.com directly.');
+      submitBtn.disabled = false;
+      submitBtn.querySelector('.cform-btn-text').textContent = 'Send Message';
+    });
+  });
+
+  resetBtn.addEventListener('click', function () {
+    /* Reset form back to empty */
+    nameInput.value  = '';
+    emailInput.value = '';
+    msgInput.value   = '';
+    [nameInput, emailInput, msgInput].forEach(function (el) {
+      el.classList.remove('is-err');
+    });
+    [errName, errEmail, errMsg].forEach(function (el) {
+      el.textContent = '';
+    });
+    submitBtn.disabled = false;
+    submitBtn.querySelector('.cform-btn-text').textContent = 'Send Message';
+    success.classList.remove('visible');
+    form.style.display = '';
+  });
+})();
