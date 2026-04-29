@@ -535,25 +535,29 @@ button,
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
+/* ── MOBILE MENU — slides in from right ── */
 .mob {
   position: fixed;
-  top: var(--nav-h);
+  top: 0;
   right: 0;
-  width: 240px;
+  bottom: 0;
+  width: 280px;
   background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--olive-l);
-  border-radius: 0 0 0 10px;
-  box-shadow: -4px 8px 32px rgba(200, 130, 90, .12);
+  border-left: 1px solid var(--border);
+  border-radius: 16px 0 0 16px;
+  box-shadow: -8px 0 40px rgba(200, 130, 90, .13);
   z-index: 960;
   visibility: hidden;
   pointer-events: none;
-  padding: 1.5rem 1.75rem 1.75rem;
+  padding: 5rem 2rem 2.5rem;
+  transform: translateX(100%);
+  transition: transform .38s var(--ease), visibility .38s;
 }
 
 .mob.open {
   visibility: visible;
   pointer-events: all;
+  transform: translateX(0);
 }
 
 .mob-close {
@@ -565,42 +569,54 @@ button,
 .mob-links {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 1.35rem;
+  align-items: stretch;
+  gap: .625rem;
 }
 
+/* Each nav link — boxed pill card */
 .mob-a {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--ink2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .875rem 1.25rem;
+  text-align: center;
   opacity: 0;
-  transform: translateX(20px);
-  transition: color .2s, opacity .35s var(--ease), transform .35s var(--ease);
+  transition: color .2s, background .2s, border-color .2s,
+              opacity .3s var(--ease), transform .3s var(--ease);
+  transform: translateX(30px);
 }
 
+/* All links fade + slide in simultaneously when menu opens */
 .mob.open .mob-a {
   opacity: 1;
   transform: translateX(0);
+  transition-delay: .18s;
 }
 
-.mob.open .mob-links li:nth-child(1) .mob-a { transition-delay: .05s; }
-.mob.open .mob-links li:nth-child(2) .mob-a { transition-delay: .10s; }
-.mob.open .mob-links li:nth-child(3) .mob-a { transition-delay: .15s; }
-.mob.open .mob-links li:nth-child(4) .mob-a { transition-delay: .20s; }
-.mob.open .mob-links li:nth-child(5) .mob-a { transition-delay: .25s; }
-.mob.open .mob-links li:nth-child(6) .mob-a { transition-delay: .30s; }
-.mob.open .mob-links li:nth-child(7) .mob-a { transition-delay: .35s; }
-.mob-a:hover { color: var(--olive-d); }
-
-/* CV link in mobile menu gets a distinct olive style */
-.mob-a.mob-cv {
+.mob-a:hover {
   color: var(--olive-d);
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
-  margin-top: .25rem;
+  background: var(--olive-pale);
+  border-color: var(--olive-l);
+}
+
+/* CV link — solid olive, stands apart */
+.mob-a.mob-cv {
+  color: #fff;
+  background: var(--olive-d);
+  border-color: var(--olive-d);
+  margin-top: .5rem;
+}
+
+.mob-a.mob-cv:hover {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
 }
 
 @media (max-width: 900px) {
