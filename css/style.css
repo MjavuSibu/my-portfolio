@@ -735,13 +735,6 @@ button,
   animation: fadeUp .8s var(--ease) .2s forwards;
 }
 
-.hero-eyebrow::before {
-  content: '';
-  width: 24px;
-  height: 1.5px;
-  background: var(--peach);
-}
-
 .status-pip {
   width: 7px;
   height: 7px;
