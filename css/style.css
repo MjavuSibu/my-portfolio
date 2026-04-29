@@ -119,65 +119,27 @@ strong {
 /* ── CUSTOM CURSOR ─────────────────────────────────── */
 #cdot,
 #cring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+  display: none;
 }
 
-#cdot {
-  width: 7px;
-  height: 7px;
-  background: var(--olive-d);
-  transition: opacity .3s, width .25s var(--ease), height .25s var(--ease), background .2s;
+a,
+button,
+[role="button"],
+.cert-card,
+.nav-cv,
+.cform-btn,
+.cform-reset {
+  cursor: pointer;
 }
 
-#cring {
-  width: 34px;
-  height: 34px;
-  border: 1.5px solid var(--peach);
-  transition: opacity .3s, width .35s var(--ease), height .35s var(--ease), border-color .2s, background .2s;
+.proj-scroll {
+  cursor: grab;
 }
 
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-
-  a,
-  button,
-  [role="button"],
-  .proj-card,
-  .sk-card,
-  .cert-card {
-    cursor: none;
-  }
-
-  #cring.hov {
-    width: 50px;
-    height: 50px;
-    border-color: var(--olive-d);
-    background: var(--peach-glow);
-  }
-
-  #cdot.hov {
-    background: var(--peach-d);
-    width: 5px;
-    height: 5px;
-  }
+.proj-scroll:active {
+  cursor: grabbing;
 }
 
-@media (pointer: coarse) {
-
-  #cdot,
-  #cring {
-    display: none;
-  }
-}
 
 /* ── SCROLL PROGRESS ───────────────────────────────── */
 #progress {
@@ -814,7 +776,11 @@ strong {
 }
 
 .hero-name span {
-  display: block;
+  display: inline;
+}
+
+.hero-name .first::after {
+  content: '\00a0';
 }
 
 .hero-name .first {
@@ -1104,6 +1070,11 @@ strong {
 
   .hero-right {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 460px;
+    padding: 3rem 1.5rem 4rem;
+    overflow: visible;
   }
 
   .hero-left {
@@ -1114,6 +1085,18 @@ strong {
 
   .hero-left::before {
     display: none;
+  }
+
+  .photo-frame {
+    width: 260px;
+    height: 340px;
+  }
+
+  .photo-frame::before {
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
   }
 }
 
@@ -1783,24 +1766,36 @@ strong {
 .cert-pdf-badge {
   display: inline-flex;
   align-items: center;
-  gap: .35rem;
+  gap: .5rem;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: .6rem;
+  font-size: .72rem;
   font-weight: 700;
-  letter-spacing: .14em;
+  letter-spacing: .13em;
   text-transform: uppercase;
-  color: var(--olive-d);
-  background: var(--peach-pale);
-  border: 1px solid rgba(200, 130, 90, .25);
+  color: #fff;
+  background: var(--olive-d);
+  border: 1.5px solid var(--olive-d);
   border-radius: 100px;
-  padding: .2rem .65rem;
-  margin-top: .75rem;
-  transition: background .2s, color .2s;
+  padding: .55rem 1.1rem;
+  margin-top: 1.25rem;
+  transition: background .22s, box-shadow .22s, transform .18s;
+}
+
+.cert-pdf-badge::before {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 13px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='13' fill='none' stroke='white' stroke-width='1.8' viewBox='0 0 24 24'%3E%3Cpath d='M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
 }
 
 .cert-card-link:hover .cert-pdf-badge {
-  background: var(--olive-d);
-  color: #fff;
+  background: var(--olive);
+  box-shadow: 0 4px 14px rgba(122, 140, 74, .3);
+  transform: translateY(-1px);
 }
 
 /* ── CONTACT ───────────────────────────────────────── */
