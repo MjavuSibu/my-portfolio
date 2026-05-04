@@ -379,4 +379,38 @@ if (yr) yr.textContent = new Date().getFullYear();
     success.classList.remove('visible');
     form.style.display = '';
   });
+
+  /* ── SCREENSHOT CAROUSEL ────────────────────────── */
+(function () {
+  var carousels = {};
+
+  window.moveCarousel = function (trackId, dotsId, dir) {
+    if (!carousels[trackId]) carousels[trackId] = 0;
+    var track = document.getElementById(trackId);
+    var dots = document.getElementById(dotsId);
+    if (!track) return;
+    var total = track.children.length;
+    carousels[trackId] = (carousels[trackId] + dir + total) % total;
+    var idx = carousels[trackId];
+    track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+    if (dots) {
+      Array.from(dots.children).forEach(function (d, i) {
+        d.classList.toggle('act', i === idx);
+      });
+    }
+  };
+
+  /* Clicking a dot also navigates */
+  document.querySelectorAll('.car-dots').forEach(function (dotsEl) {
+    var dotsId = dotsEl.id;
+    var trackId = dotsId.replace('Dots', 'Track');
+    Array.from(dotsEl.children).forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        if (!carousels[trackId]) carousels[trackId] = 0;
+        var dir = i - carousels[trackId];
+        moveCarousel(trackId, dotsId, dir);
+      });
+    });
+  });
+})();
 })();

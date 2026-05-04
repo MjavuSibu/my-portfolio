@@ -2705,9 +2705,9 @@ button,
 }
 
 .web-badge {
-  background: rgba(85, 97, 40, .1);
-  color: var(--olive-d);
-  border: 1px solid rgba(85, 97, 40, .2);
+  background: rgba(219, 39, 119, .08);
+  color: #9D174D;
+  border: 1px solid rgba(219, 39, 119, .2);
 }
 
 /* Card body padding — separates content from preview */
@@ -2720,4 +2720,90 @@ button,
   .phone-frame.side { width: 58px; height: 116px; }
   .phone-frame.main { width: 74px; height: 144px; }
   .preview-zone.mobile { height: 176px; }
+}
+
+/* ── CAROUSEL (inside browser frame) ──────────────── */
+.browser-screen.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  display: block;
+}
+
+.car-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, .88);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--ink);
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity .2s, transform .2s, background .2s;
+  padding: 0;
+}
+
+.browser-screen.carousel:hover .car-btn {
+  opacity: 1;
+}
+
+.car-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.car-prev { left: .4rem; }
+.car-next { right: .4rem; }
+
+.car-dots {
+  position: absolute;
+  bottom: .45rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: .35rem;
+  z-index: 3;
+}
+
+.car-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .45);
+  transition: background .2s, transform .2s;
+  cursor: pointer;
+}
+
+.car-dot.act {
+  background: #fff;
+  transform: scale(1.35);
+}
+
+.proj-card:nth-child(4) .web-badge {
+  background: rgba(85, 97, 40, .1);
+  color: var(--olive-d);
+  border: 1px solid rgba(85, 97, 40, .2);
 }
