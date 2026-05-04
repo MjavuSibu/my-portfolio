@@ -1,6 +1,3 @@
-/* =====================================================
-   Sibulele Mjavu — Portfolio Stylesheet
-===================================================== */
 
 :root {
   --bg: #FFFFFF;
@@ -793,7 +790,7 @@ button,
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(3.75rem, 6vw, 7rem);
   font-weight: 300;
-  line-height: .85;
+  line-height: .70;
   letter-spacing: -.01em;
   margin-bottom: 1.75rem;
   color: var(--ink);
@@ -805,9 +802,7 @@ button,
   display: inline;
 }
 
-.hero-name .first::after {
-  content: '\00a0';
-}
+
 
 .hero-name .first {
   font-style: Helvetica;
@@ -2551,4 +2546,178 @@ button,
   .chat-window {
     width: calc(100vw - 2rem);
   }
+}
+
+/* ── PROJECT PREVIEW ZONES ─────────────────────────── */
+.preview-zone {
+  position: relative;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* Mobile — three portrait phone frames */
+.preview-zone.mobile {
+  height: 210px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px 0 0;
+  gap: 8px;
+}
+
+.phone-frame {
+  border-radius: 14px;
+  border: 2px solid #D4C8BC;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(28, 18, 9, .1);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+
+/* Notch bar at top of each phone */
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 4px;
+  background: #D4C8BC;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.phone-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Side phones — smaller, sit behind */
+.phone-frame.side {
+  width: 70px;
+  height: 140px;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+/* Centre phone — taller, in front */
+.phone-frame.main {
+  width: 90px;
+  height: 174px;
+  z-index: 2;
+  box-shadow: 0 8px 28px rgba(28, 18, 9, .18);
+}
+
+/* Hover animations */
+.proj-card:hover .phone-frame.main {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(28, 18, 9, .2);
+}
+.proj-card:hover .phone-frame.side:first-of-type {
+  transform: translateY(-4px) rotate(-5deg);
+}
+.proj-card:hover .phone-frame.side:last-of-type {
+  transform: translateY(-4px) rotate(5deg);
+}
+
+/* Web — browser chrome mockup */
+.preview-zone.web {
+  height: 180px;
+  padding: 14px 14px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-bar {
+  background: #EFEBE6;
+  border-radius: 5px 5px 0 0;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.browser-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.browser-url {
+  flex: 1;
+  background: rgba(255,255,255,.6);
+  border-radius: 100px;
+  height: 13px;
+  margin-left: 6px;
+}
+
+.browser-screen {
+  flex: 1;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+.browser-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform .5s var(--ease);
+}
+
+.proj-card:hover .browser-screen img {
+  transform: scale(1.04);
+}
+
+/* Type badge — bottom right of preview zone */
+.type-badge {
+  position: absolute;
+  bottom: .6rem;
+  right: .6rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .22rem .7rem;
+  border-radius: 100px;
+  z-index: 4;
+}
+
+.mob-badge {
+  background: rgba(200, 130, 90, .12);
+  color: var(--peach-d);
+  border: 1px solid rgba(200, 130, 90, .25);
+}
+
+.web-badge {
+  background: rgba(85, 97, 40, .1);
+  color: var(--olive-d);
+  border: 1px solid rgba(85, 97, 40, .2);
+}
+
+/* Card body padding — separates content from preview */
+.proj-card-body {
+  padding: 1.5rem 2rem 2rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .phone-frame.side { width: 58px; height: 116px; }
+  .phone-frame.main { width: 74px; height: 144px; }
+  .preview-zone.mobile { height: 176px; }
 }
