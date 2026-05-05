@@ -520,4 +520,64 @@ if (yr) yr.textContent = new Date().getFullYear();
 
   obs.observe(projSec);
 })();
+/* ── SKILLS FLOATING LOGOS ──────────────────────── */
+(function () {
+  var layer = document.getElementById('skillsFloatLayer');
+  if (!layer) return;
+
+  var logos = [
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/csharp/csharp-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/dart/dart-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/flutter/flutter-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/firebase/firebase-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/github/github-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/html5/html5-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/css3/css3-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/dotnetcore/dotnetcore-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/pandas/pandas-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/numpy/numpy-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/vscode/vscode-original.svg',
+    'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/androidstudio/androidstudio-original.svg',
+  ];
+
+  var active = false;
+
+  function spawnLogo() {
+    if (!active) return;
+    var src = logos[Math.floor(Math.random() * logos.length)];
+    var size = 34 + Math.random() * 24;
+    var dur = 8 + Math.random() * 6;
+    var el = document.createElement('div');
+    el.className = 'flogo';
+    el.style.cssText = [
+      'left:' + (3 + Math.random() * 90) + '%',
+      'bottom:' + (-size - 10) + 'px',
+      'width:' + size + 'px',
+      'height:' + size + 'px',
+      'border-radius:' + Math.round(size * .2) + 'px',
+      'padding:' + Math.round(size * .1) + 'px',
+      'animation-duration:' + dur + 's'
+    ].join(';');
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = '';
+    el.appendChild(img);
+    layer.appendChild(el);
+    setTimeout(function () { el.remove(); }, (dur + 1) * 1000);
+  }
+
+  var skillsSec = document.getElementById('skills');
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      active = en.isIntersecting;
+      if (active) {
+        spawnLogo(); spawnLogo(); spawnLogo();
+      }
+    });
+  }, { threshold: 0.1 });
+
+  if (skillsSec) obs.observe(skillsSec);
+  setInterval(spawnLogo, 1100);
+})();
 })();

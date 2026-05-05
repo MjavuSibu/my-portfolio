@@ -1303,85 +1303,140 @@ button,
 }
 
 /* ── SKILLS ────────────────────────────────────────── */
-.sk-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.sk-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  transition: border-color .3s, box-shadow .3s, transform .3s;
-}
-
-.sk-card::after {
-  content: '';
+.float-layer {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--peach-d), var(--peach-l));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .4s var(--ease);
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
 }
 
-.sk-card:hover {
-  border-color: var(--peach-l);
-  box-shadow: 0 8px 32px rgba(200, 130, 90, .09);
-  transform: translateY(-3px);
-}
-
-.sk-card:hover::after {
-  transform: scaleX(1);
-}
-
-/* ── Soft Skills card — olive green differentiation ── */
-.sk-card:nth-child(4)::after {
-  background: linear-gradient(90deg, var(--olive-d), var(--olive-l));
-}
-.sk-card:nth-child(4) .sk-icon {
-  background: var(--olive-pale);
-  color: var(--olive-d);
-}
-.sk-card:nth-child(4):hover {
-  border-color: var(--olive-l);
-  box-shadow: 0 8px 32px rgba(122, 140, 74, .09);
-}
-
-.sk-icon {
+.flogo {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--peach-pale);
-  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+  border: 1px solid rgba(0, 0, 0, .06);
+  opacity: 0;
+  animation: floatLogo linear infinite;
+}
+
+.flogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes floatLogo {
+  0%   { opacity: 0;   transform: translateY(0) rotate(-3deg); }
+  12%  { opacity: .22; }
+  85%  { opacity: .14; }
+  100% { opacity: 0;   transform: translateY(-160px) rotate(5deg); }
+}
+
+.sk-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sk-layout::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--border) 15%,
+    var(--border) 85%,
+    transparent
+  );
+}
+
+.sk-block {
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sk-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sk-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
   color: var(--peach-d);
-  margin-bottom: 1.25rem;
+  margin-bottom: .875rem;
+  padding-bottom: .5rem;
+  border-bottom: 1.5px solid var(--peach-pale);
 }
 
-.sk-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.125rem;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--ink);
-  margin-bottom: 1rem;
+.sk-heading.olive {
+  color: var(--olive-d);
+  border-bottom-color: var(--olive-pale);
 }
 
-.sk-tags {
+.sk-list {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: .375rem;
+  flex-direction: column;
+  gap: .4rem;
+  padding-left: .1rem;
 }
 
+.sk-item {
+  display: flex;
+  align-items: baseline;
+  gap: .625rem;
+  font-size: .9rem;
+  color: var(--ink2);
+  line-height: 1.55;
+}
+
+.sk-item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--peach);
+  flex-shrink: 0;
+  margin-top: .48rem;
+}
+
+.sk-item.olive::before {
+  background: var(--olive-l);
+}
+
+.sk-item strong {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: .9rem;
+}
+
+@media (max-width: 768px) {
+  .sk-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .sk-layout::after {
+    display: none;
+  }
+}
 /* ── PROJECTS ──────────────────────────────────────── */
 .proj-header {
   display: flex;
