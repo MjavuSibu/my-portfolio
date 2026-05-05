@@ -383,6 +383,7 @@ if (yr) yr.textContent = new Date().getFullYear();
   /* ── SCREENSHOT CAROUSEL ────────────────────────── */
 (function () {
   var carousels = {};
+  window._carouselState = carousels;
 
   window.moveCarousel = function (trackId, dotsId, dir) {
     if (!carousels[trackId]) carousels[trackId] = 0;
@@ -412,5 +413,111 @@ if (yr) yr.textContent = new Date().getFullYear();
       });
     });
   });
+})();
+
+/* ── IMAGE LIGHTBOX ─────────────────────────────── */
+(function () {
+  var lb = document.getElementById('imgLb');
+  var lbImg = document.getElementById('imgLbImg');
+  var lbCaption = document.getElementById('imgLbCaption');
+  var lbClose = document.getElementById('imgLbClose');
+  if (!lb) return;
+
+  function openLb(src, caption) {
+    lbImg.src = src;
+    lbImg.alt = caption || '';
+    lbCaption.textContent = caption || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    /* clear src after transition so it doesn't flash */
+    setTimeout(function () { lbImg.src = ''; }, 300);
+  }
+
+  /* Close on backdrop click */
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb) closeLb();
+  });
+
+  lbClose.addEventListener('click', closeLb);
+
+  /* Close on Escape */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeLb();
+  });
+
+  /* ── Make phone frame images clickable ── */
+  document.querySelectorAll('.phone-frame img').forEach(function (img) {
+    img.addEventListener('click', function () {
+      openLb(img.src, img.alt);
+    });
+  });
+
+  /* ── Make browser screen images clickable (static) ── */
+  document.querySelectorAll('.browser-screen:not(.carousel) img').forEach(function (img) {
+    img.addEventListener('click', function () {
+      openLb(img.src, img.alt);
+    });
+  });
+
+  /* ── Make carousel images clickable ── */
+  document.querySelectorAll('.browser-screen.carousel').forEach(function (carousel) {
+    carousel.addEventListener('click', function (e) {
+      /* ignore clicks on nav buttons and dots */
+      if (e.target.closest('.car-btn') || e.target.closest('.car-dots')) return;
+      /* find the visible image */
+      var track = carousel.querySelector('.carousel-track');
+      if (!track) return;
+      var imgs = track.querySelectorAll('img');
+      var trackId = track.id;
+      var idx = window._carouselState && window._carouselState[trackId]
+        ? window._carouselState[trackId]
+        : 0;
+      var visibleImg = imgs[idx] || imgs[0];
+      if (visibleImg) openLb(visibleImg.src, visibleImg.alt);
+    });
+  });
+})();
+/* ── PROJECTS TOAST HINT ────────────────────────── */
+(function () {
+  var toast = document.getElementById('projToast');
+  var closeBtn = document.getElementById('projToastClose');
+  var projSec = document.getElementById('projects');
+  if (!toast || !projSec) return;
+
+  var dismissed = false;
+  var timer;
+
+  function showToast() {
+    if (dismissed) return;
+    toast.classList.add('show');
+    /* Auto-dismiss after 5 seconds */
+    timer = setTimeout(hideToast, 5000);
+  }
+
+  function hideToast() {
+    clearTimeout(timer);
+    toast.classList.remove('show');
+    dismissed = true;
+  }
+
+  closeBtn.addEventListener('click', hideToast);
+
+  /* Trigger once when Projects section enters view */
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting && !dismissed) {
+        /* Small delay so user has settled on the section */
+        setTimeout(showToast, 600);
+        obs.unobserve(projSec);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  obs.observe(projSec);
 })();
 })();

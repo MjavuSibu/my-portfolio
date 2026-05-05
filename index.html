@@ -245,6 +245,7 @@
             <span class="tag tag-p">PyCharm</span>
             <span class="tag tag-p">Visual Studio</span>
             <span class="tag tag-p">Android Studio</span>
+            <span class="tag tag-p">Firebase</span>
             <span class="tag tag-p">MS Office Administration</span>
           </div>
         </div>
@@ -270,6 +271,14 @@
 
   <!-- ══════════════════════ PROJECTS ══════════════════════ -->
   <section class="sec alt" id="projects" aria-label="Selected projects">
+    <div class="proj-toast" id="projToast" aria-live="polite">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+  </svg>
+  Click the project to view it full size
+  <button class="proj-toast-close" id="projToastClose" aria-label="Dismiss">&#x2715;</button>
+</div>
+
     <div class="wrap">
       <div class="proj-header">
         <div class="sh rv" style="margin-bottom:0">
@@ -773,6 +782,15 @@
       <span class="chat-unread" id="chatUnread">1</span>
     </button>
   </div>
+
+  <!-- ── IMAGE LIGHTBOX ── -->
+<div class="img-lb" id="imgLb" aria-modal="true" role="dialog" aria-label="Image preview">
+  <button class="img-lb-close" id="imgLbClose" aria-label="Close">&#x2715;</button>
+  <div class="img-lb-inner">
+    <img class="img-lb-img" id="imgLbImg" src="" alt="" />
+    <p class="img-lb-caption" id="imgLbCaption"></p>
+  </div>
+</div>
 
   <script src="js/main.js"></script>
 </body>
