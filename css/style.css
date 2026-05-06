@@ -1785,24 +1785,159 @@ button,
   gap: .375rem;
 }
 
-@media (max-width: 640px) {
-  .edu-card {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
+@media (max-width: 768px) {
+  .edu-timeline::before {
+    left: 60px;
   }
 
-  .edu-years {
-    flex-direction: row;
-    gap: .5rem;
+  .edu-entry {
+    grid-template-columns: 60px 1fr;
+    gap: 0 1.25rem;
   }
 
-  .edu-yr-line {
-    flex: none;
-    width: 24px;
-    height: 1px;
+  .edu-dot {
+    left: 54px;
+  }
+
+  .edu-detail-grid {
+    grid-template-columns: 1fr;
+    gap: .875rem;
+  }
+
+  .edu-degree {
+    font-size: 1.1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .edu-timeline::before {
+    left: 52px;
+  }
+
+  .edu-entry {
+    grid-template-columns: 52px 1fr;
+    gap: 0 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .edu-dot {
+    left: 46px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .edu-year-col {
+    padding-right: .75rem;
+  }
+
+  .edu-year {
+    font-size: .65rem;
+    letter-spacing: .06em;
+  }
+
+  .edu-year-dash {
+    font-size: .55rem;
+  }
+
+  .edu-degree {
+    font-size: 1rem;
+  }
+
+  .edu-inst {
+    font-size: .75rem;
+  }
+
+  .edu-loc {
+    font-size: .72rem;
+    margin-bottom: .75rem;
+  }
+
+  .edu-type {
+    font-size: .56rem;
+    padding: .15rem .6rem;
+    margin-bottom: .5rem;
+  }
+
+  .edu-ach {
+    font-size: .75rem;
+    padding: .375rem .7rem;
+    margin-bottom: .75rem;
+  }
+
+  .edu-detail-grid {
+    grid-template-columns: 1fr;
+    gap: .625rem;
+  }
+
+  .edu-detail-label {
+    font-size: .58rem;
+    margin-bottom: .35rem;
+  }
+
+  .edu-list-item {
+    font-size: .78rem;
+  }
+
+  .edu-divider {
+    margin-bottom: .75rem;
+  }
+}
+
+  .edu-entry:nth-child(2) {
+    border-left-color: var(--olive-l);
+  }
+
+  /* Hide the side year column and timeline line */
+  .edu-year-col {
+    display: none;
+  }
+
+  .edu-timeline::before {
+    display: none;
+  }
+
+  .edu-dot {
+    display: none;
+  }
+
+  /* Show years inline at the top of each entry */
+  .edu-content::before {
+    content: attr(data-years);
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--peach-d);
+    margin-bottom: .5rem;
+  }
+
+  .edu-entry:nth-child(2) .edu-content::before {
+    color: var(--olive-d);
+  }
+
+  .edu-degree {
+    font-size: 1rem;
+  }
+
+  .edu-ach {
+    font-size: .78rem;
+    padding: .4rem .75rem;
+  }
+
+  .edu-detail-grid {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+
+  .edu-list-item {
+    font-size: .8rem;
+  }
+
+  .edu-divider {
+    margin-bottom: .75rem;
+  }
 
 /* ── CERTIFICATIONS ────────────────────────────────── */
 .cert-grid {
