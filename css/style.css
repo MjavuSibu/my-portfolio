@@ -604,13 +604,14 @@ button,
 }
 
 /* Staggered delays */
-.mob.open .mob-links li:nth-child(1) .mob-a { transition-delay: .06s; }
+.mob.open .mob-links li:nth-child(1) .mob-a { transition-delay: .05s; }
 .mob.open .mob-links li:nth-child(2) .mob-a { transition-delay: .10s; }
-.mob.open .mob-links li:nth-child(3) .mob-a { transition-delay: .14s; }
-.mob.open .mob-links li:nth-child(4) .mob-a { transition-delay: .18s; }
-.mob.open .mob-links li:nth-child(5) .mob-a { transition-delay: .22s; }
-.mob.open .mob-links li:nth-child(6) .mob-a { transition-delay: .26s; }
-.mob.open .mob-links li:nth-child(7) .mob-a { transition-delay: .30s; }
+.mob.open .mob-links li:nth-child(3) .mob-a { transition-delay: .15s; }
+.mob.open .mob-links li:nth-child(4) .mob-a { transition-delay: .20s; }
+.mob.open .mob-links li:nth-child(5) .mob-a { transition-delay: .25s; }
+.mob.open .mob-links li:nth-child(6) .mob-a { transition-delay: .30s; }
+.mob.open .mob-links li:nth-child(7) .mob-a { transition-delay: .35s; }
+.mob.open .mob-links li:nth-child(8) .mob-a { transition-delay: .40s; }
 
 .mob-a:hover {
   color: var(--olive-d);
