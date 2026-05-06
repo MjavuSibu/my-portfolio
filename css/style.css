@@ -1437,6 +1437,14 @@ button,
     display: none;
   }
 
+  /* Right column becomes second on mobile — needs top spacing
+     to separate it from the last block of the left column */
+  .sk-layout > div:last-child {
+    margin-top: 1.75rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border);
+  }
+
   .sk-block {
     padding-bottom: 1.35rem;
     margin-bottom: 1.35rem;
